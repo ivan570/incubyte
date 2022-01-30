@@ -53,4 +53,12 @@ public class TestApplication {
 	public void stringContainAllKindOfDelimiterReturnSum() {
 		assertEquals(134, addNumber.add("1, 2\n3     5,	6	8;9		;10\\90"));
 	} // contain all kind of delimiter include `\n``,` `;` `\` should return Sum of them
+	
+	@Test
+	public void stringContainNegativeNumberReturnIllegalArgumentException() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			addNumber.add("-1, 2, 3\n 4");
+		});
+	} // contain negative number should return IllegalArgumentException
+	
 }

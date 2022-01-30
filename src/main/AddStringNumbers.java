@@ -25,8 +25,12 @@ public class AddStringNumbers {
 			// converting string into number
 			int temp = Integer.parseInt(number);
 
-			// add temp into sum
-			sum += temp;
+			// if temp less than zero return Exception
+			// else add temp into `sum`
+			if (temp < 0)
+				throw new IllegalArgumentException("negatives not allowed");
+			else
+				sum += temp;
 		}
 
 		return sum;
