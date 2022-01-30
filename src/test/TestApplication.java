@@ -33,4 +33,9 @@ public class TestApplication {
 		assertEquals(0, addNumber.add("   ")) ;
 	} // only contain space String should return Zero
 
+	@Test
+	public void stringContainOnlyOneNumberReturnNumberItself() {
+		assertEquals(1, addNumber.add("1"));
+	} // only contain one integer in the String should return number as it is
+
 }
