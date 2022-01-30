@@ -12,8 +12,8 @@ public class AddStringNumbers {
 		if (numbersStr.equals(""))
 			return 0;
 
-		// Spiting the numbers base on `,` to get numbers array
-		String numbersArr[] = numbersStr.split(",");
+		// Spiting the numbers base on `,` | `\n' | ' ' | ';' to get numbers array
+		String numbersArr[] = numbersStr.split("[\\s+,\\\\;\t\n]+");
 
 		// checking length of array
 		// if its one then return number it self
