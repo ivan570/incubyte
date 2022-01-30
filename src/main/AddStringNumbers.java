@@ -14,12 +14,21 @@ public class AddStringNumbers {
 
 		// Spiting the numbers base on `,` to get numbers array
 		String numbersArr[] = numbersStr.split(",");
-		
+
 		// checking length of array
 		// if its one then return number it self
 		if (numbersArr.length == 1)
 			return Integer.parseInt(numbersArr[0]);
 
-		return 0;
+		int sum = 0;
+		for (String number : numbersArr) {
+			// converting string into number
+			int temp = Integer.parseInt(number);
+
+			// add temp into sum
+			sum += temp;
+		}
+
+		return sum;
 	}
 }

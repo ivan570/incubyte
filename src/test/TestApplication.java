@@ -36,6 +36,11 @@ public class TestApplication {
 	@Test
 	public void stringContainOnlyOneNumberReturnNumberItself() {
 		assertEquals(1, addNumber.add("1"));
-	} // only contain one integer in the String should return number as it is
+	} // 05. only contain one integer in the String should return number as it is
+	
+	@Test
+	public void stringContainCommaDelimiterTwoNumberReturnSum() {
+		assertEquals(3, addNumber.add("1,2"));
+	} // contain two comma Delimiter integer in the String should return Sum of them
 
 }
