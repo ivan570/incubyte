@@ -48,4 +48,9 @@ public class TestApplication {
 	public void stringContainCommaAndNewlineDelimiterThreeNumberReturnSum() {
 		assertEquals(6, addNumber.add("1\n2,3"));
 	} // contain three comma and new line Delimiter integer in the String should return Sum of them
+	
+	@Test
+	public void stringContainAllKindOfDelimiterReturnSum() {
+		assertEquals(134, addNumber.add("1, 2\n3     5,	6	8;9		;10\\90"));
+	} // contain all kind of delimiter include `\n``,` `;` `\` should return Sum of them
 }
