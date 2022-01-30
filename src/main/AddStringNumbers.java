@@ -23,14 +23,20 @@ public class AddStringNumbers {
 		int sum = 0;
 		for (String number : numbersArr) {
 			// converting string into number
-			int temp = Integer.parseInt(number);
-
+			// if string contain Alphabet than throw exception
+			int temp;
+			try {
+				temp = Integer.parseInt(number);
+			} catch (NumberFormatException exception) {
+				throw new NumberFormatException("Alphabet not allowed");
+			}
 			// if temp less than zero return Exception
 			// else add temp into `sum`
 			if (temp < 0)
 				throw new IllegalArgumentException("negatives not allowed");
 			else
 				sum += temp;
+
 		}
 
 		return sum;

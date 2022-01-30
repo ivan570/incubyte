@@ -61,4 +61,10 @@ public class TestApplication {
 		});
 	} // contain negative number should return IllegalArgumentException
 	
+	@Test
+	public void stringContainAlphabetReturnNumberFormatException() {
+		assertThrows(NumberFormatException.class, () -> {
+			addNumber.add("A, b2, 3\n 4");
+		});
+	} // contain Alphabet should return NumberFormatException
 }
