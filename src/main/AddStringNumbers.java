@@ -8,6 +8,7 @@ public class AddStringNumbers {
 		// trim the numbers to remove white space
 		numbersStr = numbersStr.trim();
 
+
 		// if string is empty return 0
 		if (numbersStr.equals(""))
 			return 0;

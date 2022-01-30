@@ -30,7 +30,7 @@ public class TestApplication {
 	
 	@Test
 	public void onlyContainSpaceStringReturnZero() {
-		assertEquals(0, addNumber.add("   "));
+		assertEquals(0, addNumber.add("   ")) ;
 	} // only contain space String should return Zero
 
 }
