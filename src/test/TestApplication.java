@@ -27,4 +27,10 @@ public class TestApplication {
 	public void emptyStringReturnZero() {
 		assertEquals(0, addNumber.add(""));
 	} // empty String should return Zero
+	
+	@Test
+	public void onlyContainSpaceStringReturnZero() {
+		assertEquals(0, addNumber.add("   "));
+	} // only contain space String should return Zero
+
 }

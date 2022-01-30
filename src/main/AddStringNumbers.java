@@ -5,6 +5,9 @@ public class AddStringNumbers {
 		if (numbersStr == null)
 			throw new IllegalArgumentException("Null String is not allow");
 		
+		// trim the numbers to remove white space
+		numbersStr = numbersStr.trim();
+
 		// if string is empty return 0
 		if (numbersStr.equals(""))
 			return 0;
